@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://50aa3itmoamg"]
+[gd_scene load_steps=6 format=3 uid="uid://50aa3itmoamg"]
 
 [ext_resource type="Script" uid="uid://cccb154kcpdvh" path="res://scripts/main_ch.gd" id="1_o1cwk"]
 [ext_resource type="Texture2D" uid="uid://ch88l8ai7neoy" path="res://assets/temp_ch.jpg" id="1_p52uj"]
+[ext_resource type="Texture2D" uid="uid://cperitcu6ap6b" path="res://assets/weapon.jpg" id="3_okabw"]
+[ext_resource type="AudioStream" uid="uid://hm0k2dklkivg" path="res://assets/ЛЕГЕНДАРНЫЙ КРИТ ПАПИЧА!_1.mp3" id="4_nxtsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1cwk"]
 size = Vector2(89, 89)
@@ -9,7 +11,7 @@ size = Vector2(89, 89)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_o1cwk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="main" type="Sprite2D" parent="."]
 position = Vector2(562, 311)
 scale = Vector2(0.139062, 0.139062)
 texture = ExtResource("1_p52uj")
@@ -17,3 +19,13 @@ texture = ExtResource("1_p52uj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(562, 311)
 shape = SubResource("RectangleShape2D_o1cwk")
+
+[node name="weapon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(524, 323)
+scale = Vector2(0.0065, 0.032375)
+texture = ExtResource("3_okabw")
+
+[node name="weapon_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nxtsy")
+volume_db = -10.0

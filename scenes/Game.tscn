@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc3uygnixy2a6"]
+[gd_scene load_steps=6 format=3 uid="uid://cc3uygnixy2a6"]
 
 [ext_resource type="PackedScene" uid="uid://50aa3itmoamg" path="res://scenes/main_ch.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://dg2sgc1c0vd4k" path="res://icon.svg" id="2_qbsmt"]
+[ext_resource type="AudioStream" uid="uid://dekxqxiarjgn6" path="res://assets/1.Kla$-Почему.mp3" id="3_cpr0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpr0p"]
 texture = ExtResource("2_qbsmt")
@@ -91,3 +92,8 @@ scale = Vector2(0.49796, 0.484648)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(560, 317)
+
+[node name="background_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cpr0p")
+volume_db = -10.0
+autoplay = true

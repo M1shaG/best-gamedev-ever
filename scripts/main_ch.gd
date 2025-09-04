@@ -28,7 +28,7 @@ func get_input():
 		weapon_attack()
 	
 	if input_direction != Vector2.ZERO:
-		main_ch.rotation = input_direction.angle() + PI
+		main_ch.rotation = input_direction.angle()
 
 func _physics_process(delta):
 	get_input()

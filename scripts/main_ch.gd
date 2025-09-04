@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var attack_duration = 1
 @export var rotation_speed = 360.0  
 
-var main_ch: Sprite2D
+var main_ch: AnimatedSprite2D
 var weapon: Sprite2D
 var rotating = false
 var rotation_timer = 0.0
@@ -24,7 +24,6 @@ func weapon_attack():
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed
-	
 	if Input.is_action_just_pressed("weapon_attack"):
 		weapon_attack()
 	

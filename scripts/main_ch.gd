@@ -28,7 +28,32 @@ func get_input():
 		weapon_attack()
 	
 	if input_direction != Vector2.ZERO:
-		main_ch.rotation = input_direction.angle()
+		
+		input_direction = input_direction.normalized()
+		# Determine which animation to play 
+		if input_direction.y < -0.5:
+			if input_direction.x > 0.5:
+				main_ch.play("up_right")
+			elif input_direction.x < -0.5:
+				main_ch.play("up_left")
+			else:
+				main_ch.play("up")
+		elif input_direction.y > 0.5:
+			if input_direction.y > 0.5:
+				if input_direction.x > 0.5:
+					main_ch.play("down_right")
+				elif input_direction.x < -0.5:
+					main_ch.play("down_left")
+				else:
+					main_ch.play("down")
+		else:
+			if input_direction.x > 0.5:
+				main_ch.play("right")
+			elif input_direction.x < -0.5:
+				main_ch.play("left")
+	else:
+		main_ch.frame = 3
+		main_ch.stop()
 
 func _physics_process(delta):
 	get_input()

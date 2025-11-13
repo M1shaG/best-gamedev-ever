@@ -2,22 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c128fh2effe2r"
-path="res://.godot/imported/right4.png-2c34d5e8b9fea94ea4d3139d175da877.ctex"
+uid="uid://b0q3n23wgdi2"
+path="res://.godot/imported/up_right3.png-123f3e57356f674df946d0c8380792f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://right4.png"
-dest_files=["res://.godot/imported/right4.png-2c34d5e8b9fea94ea4d3139d175da877.ctex"]
+source_file="res://assets/animations/main_ch/up_right/up_right3.png"
+dest_files=["res://.godot/imported/up_right3.png-123f3e57356f674df946d0c8380792f9.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

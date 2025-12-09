@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cldfbf1jyn7al"]
+
+[ext_resource type="Script" uid="uid://bstklwsotvi67" path="res://scripts/UI/volume.gd" id="1_r6d6q"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "разные настройки сделай даун
+"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_r6d6q")
+bus_name = "Master"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="MarginContainer/VBoxContainer/Volume" method="_on_value_changed"]

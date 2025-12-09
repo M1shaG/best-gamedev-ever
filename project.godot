@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="idk"
-run/main_scene="uid://cc3uygnixy2a6"
+run/main_scene="uid://0xd4ypd5htki"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalAudioStreamPlayer="*res://scenes/audio/audio_stream_player.tscn"
 
 [input]
 

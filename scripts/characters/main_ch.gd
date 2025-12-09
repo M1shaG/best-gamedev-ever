@@ -9,11 +9,11 @@ var weapon: Sprite2D
 var rotating = false
 var rotation_timer = 0.0
 
-func _ready():
+func _ready() -> void:
 	main_ch = $main
 	weapon = $weapon
 
-func weapon_attack():
+func weapon_attack() -> void:
 	if not rotating:
 		$weapon_sound.play()
 		weapon.visible = true
@@ -21,7 +21,7 @@ func weapon_attack():
 		rotation_timer = 0.0
 		rotating = true
 
-func get_input():
+func get_input() -> void:
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed
 	if Input.is_action_just_pressed("weapon_attack"):
@@ -55,7 +55,7 @@ func get_input():
 		main_ch.frame = 3
 		main_ch.stop()
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	get_input()
 	move_and_slide()
 	
